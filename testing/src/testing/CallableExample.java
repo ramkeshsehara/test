@@ -1,6 +1,7 @@
 package testing;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,6 +26,10 @@ public class CallableExample {
 			}
 			executor.shutdown();
 		}
+		
+		List<LinkedList<Integer>> vertex = new ArrayList<LinkedList<Integer>>();
+		
+		
 	}
 
 }

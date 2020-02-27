@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Producer2 implements Runnable {
 
-	List<Integer> mesgQ = new ArrayList<Integer>();
-	int MAX_SIZE;
-
+	private final List<Integer> mesgQ;
+	private final int MAX_SIZE;
+	
 	public Producer2(List<Integer> mesgQ, int size) {
 		this.mesgQ = mesgQ;
 		this.MAX_SIZE = size;
@@ -36,7 +36,7 @@ public class Producer2 implements Runnable {
 				}
 			}
 			System.out.println("produced "+ counter +"\n");
-			Thread.sleep(1000);
+			Thread.sleep(600);
 			mesgQ.add(counter);
 			mesgQ.notifyAll();
 		}

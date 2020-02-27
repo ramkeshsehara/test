@@ -3,6 +3,7 @@ package testing;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -28,8 +29,22 @@ public class CallableExample {
 		}
 		
 		List<LinkedList<Integer>> vertex = new ArrayList<LinkedList<Integer>>();
-		
-		
-	}
 
+		executor.submit(new Callable<Integer>() {
+
+			@Override
+			public Integer call() throws Exception {
+
+				return null;
+			}
+		});
+		
+		executor.submit(new Runnable() {
+			@Override
+			public void run() {
+			   
+				
+			}
+		});
+	}
 }

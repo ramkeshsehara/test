@@ -1,11 +1,10 @@
 package testing;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Consumer2 implements Runnable {
 
-	private List<Integer> mesgQ = new ArrayList<Integer>();
+	private List<Integer> mesgQ;
 
 	public Consumer2(List<Integer> sharedQ) {
 		mesgQ = sharedQ;
@@ -33,7 +32,7 @@ public class Consumer2 implements Runnable {
 					e.printStackTrace();
 				}
 			}
-			Thread.sleep(1000);
+			Thread.sleep(600);
 			System.out.println(mesgQ.remove(0));
 			mesgQ.notifyAll();
 		}

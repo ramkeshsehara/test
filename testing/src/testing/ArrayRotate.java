@@ -1,6 +1,7 @@
 package testing;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class ArrayRotate {
@@ -8,12 +9,19 @@ public class ArrayRotate {
 
 		ArrayList<String> obj1 = new ArrayList<String>();
 		int a1[] = {1,0,1,1,1,0,0};
+		
+		Arrays.sort(a1);
 		int d = 2;
 		int key = 0;
 		int sum = -5;
 		ArrayRotate obj = new ArrayRotate();
 
-		obj.maxSubArray(a1);
+		for(int x: a1) {
+			System.out.println(x);	
+		}
+		
+		
+		//obj.maxSubArray(a1);
 		 
 		//obj.minMidMax(a1);
 		// obj.printArray(a1);
